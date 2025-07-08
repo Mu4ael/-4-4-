@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.wrapper header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    align-items: center;
+}
+
+.wrapper header .iconCart {
+    width: 68px;
+    height: 68px;
+    cursor: pointer;
+}
+
+.wrapper header .iconCart img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 20px;
+}
+
+.card .image {
+    width: 250px;
+    height: 250px;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card p {
+    font-size: 22px;
+}
+
+.card .buttonCart {
+    padding: 10px 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.cart {
+    position: absolute;
+    width: 700px;
+    background-color: lightgray;
+    right: -700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: right 1s;
+}
+
+.wrapper .open {
+    right: 0;
+}
+
+.cart .cartMenu {
+    width: 100%;
+    display: flex;
+}
+
+.cart .cartMenu button {
+    flex: 1;
+    font-size: 42px;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.cart .cartMenu button:nth-child(1) {
+    background-color: yellow;
+}
+
+.cart .cartMenu button:nth-child(2) {
+    background-color: red;
+}
+
+.cart .cartList {
+    padding: 40px;
+}
